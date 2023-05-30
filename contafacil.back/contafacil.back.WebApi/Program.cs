@@ -31,8 +31,10 @@ try
     builder.Services.AddControllersExtension();
     builder.Services.AddCorsExtension();
     builder.Services.AddHealthChecks();
+
     builder.Services.AddJWTAuthentication(builder.Configuration);
     builder.Services.AddAuthorizationPolicies(builder.Configuration);
+
     builder.Services.AddApiVersioningExtension();
     builder.Services.AddMvcCore()
         .AddApiExplorer();
